@@ -69,7 +69,7 @@ public class DeliveryManController : ControllerBase
     /// <response code="200">Caso seja válido placa modificada com sucesso</response>
     /// <response code="404">Caso não seja válido</response>
     /// <response code="400">Caso não seja válido</response>
-    [HttpPut("{id}/cnh")]
+    [HttpPost("{id}/cnh")]
     [ProducesResponseType(StatusCodes.Status200OK)] 
     public IActionResult PutDeliveryManCnh(string id, [FromBody] UpdateDeliveryManDto deliveryManDto)
     {

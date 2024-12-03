@@ -10,15 +10,12 @@ public class DeliveryManContext
 
     public DeliveryManContext(IConfiguration configuration)
     {
-        var connectionString = 
-            configuration.GetSection("MongoDB:ConnectionString").Value;
-        var databaseName =
-            configuration.GetSection("MongoDB:DatabaseName").Value;
+        var connectionString = configuration.GetSection("MongoDB:ConnectionString").Value;
+        var databaseName = configuration.GetSection("MongoDB:DatabaseName").Value;
         var client = new MongoClient(connectionString);
         _database = client.GetDatabase(databaseName);
-        
     }
-    
+
     public IMongoCollection<DeliveryMan> DeliveryMan => _database.GetCollection<DeliveryMan>("DeliveryMan");
-    
 }
+

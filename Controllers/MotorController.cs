@@ -104,8 +104,6 @@ public class MotorController : ControllerBase
     /// <summary>
     /// Consultar motos existentes por id
     /// </summary>
-    /// <param name="skip"></param>
-    /// <param name="take"></param>
     /// <returns>IActionResult</returns>
     /// <response code="200">Detalhes da moto</response>
     /// <response code="404">Moto não encontrada</response>

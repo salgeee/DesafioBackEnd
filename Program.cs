@@ -4,14 +4,13 @@ using MotoRentalApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Registrar contexto MongoDB
 builder.Services.AddSingleton<MotorcycleContext>();
 builder.Services.AddSingleton<DeliveryManContext>();
+builder.Services.AddSingleton<LocationContext>();
 
-// Registrar controladores no contêiner de serviços
+
 builder.Services.AddControllers();
 
-// Registrar Swagger (opcional, caso esteja configurando Swagger)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -32,7 +31,6 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
-// Configurar Swagger no pipeline (opcional)
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -44,7 +42,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Mapear os controladores no pipeline
 app.MapControllers();
 
 app.Run();
