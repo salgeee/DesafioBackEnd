@@ -1,4 +1,9 @@
+using MotoRentalApp.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Registrar contexto MongoDB
+builder.Services.AddSingleton<MotorcycleContext>();
 
 // Registrar controladores no contêiner de serviços
 builder.Services.AddControllers();

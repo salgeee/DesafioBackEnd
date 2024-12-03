@@ -104,3 +104,10 @@ C:\Users\leofs\Documents\programas\DesafioBackEnd\obj\Debug\net9.0\refint\MotoRe
 C:\Users\leofs\Documents\programas\DesafioBackEnd\obj\Debug\net9.0\MotoRentalApp.pdb
 C:\Users\leofs\Documents\programas\DesafioBackEnd\obj\Debug\net9.0\MotoRentalApp.genruntimeconfig.cache
 C:\Users\leofs\Documents\programas\DesafioBackEnd\obj\Debug\net9.0\ref\MotoRentalApp.dll
+C:\Users\leofs\Documents\programas\DesafioBackEnd\obj\Debug\net9.0\MotoRentalApp.sourcelink.json
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\DnsClient.dll
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\MongoDB.Bson.dll
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\MongoDB.Driver.dll
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\SharpCompress.dll
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\Snappier.dll
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\ZstdSharp.dll
