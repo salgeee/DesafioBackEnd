@@ -86,7 +86,7 @@ POST /locacao
   "end_forecast_date": "2024-12-04T12:37:00.725Z",
   "plan": 7
 }
-
+```
 PUT /locacao/{id}/devolucao
 ```
 {
