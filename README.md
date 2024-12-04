@@ -38,12 +38,11 @@ dotnet restore
 ```
 dotnet run
 ```
-A aplicação estará disponível em http://localhost:5000.
 
 ### 5. Testar a API com Swagger
-```
-http://localhost:5000/swagger
-```
+
+A aplicação estará disponível http://localhost:5000/swagger
+
 
 
 ## EndPoints Disponíveis
