@@ -18,13 +18,8 @@ Clone o projeto para o seu ambiente local:
 git clone https://github.com/SEU_USUARIO/motorental-api.git
 cd motorental-api
 ```
-### Testar API com Swagger para verificar os EndPoints
-```
-http://localhost:5000/swagger
-```
 
-
-### Configurar MongoDB
+### 2. Configurar Banco de Dados
 ```
 {
   "MongoDB": {
@@ -34,7 +29,25 @@ http://localhost:5000/swagger
 }
 ```
 
-### Testes com Postman(ou similares)
+### 3. Restaurar dependências
+```
+dotnet restore
+```
+
+### 4. Rodar o projeto 
+```
+dotnet run
+```
+
+### 5. Testar a API com Swagger
+```
+http://localhost:5000/swagger
+```
+
+
+
+
+## Testes com Postman(ou similares)
 
 Entregadores
 ```
