@@ -81,11 +81,18 @@ POST /motos
 POST /locacao
 ```
 {
-  "id_deliveryman": "entregador123",
-  "id_motor": "moto123",
-  "start_date": "2024-01-01",
-  "end_forecast_date": "2024-01-07",
+  "id_deliveryman": "string",
+  "id_motor": "string",
+  "start_date": "2024-12-04T12:37:00.725Z",
+  "end_date": "2024-12-04T12:37:00.725Z",
+  "end_forecast_date": "2024-12-04T12:37:00.725Z",
   "plan": 7
+}
+
+PUT /locacao/{id}/devolucao
+```
+{
+  "return_date": "2024-12-04T12:37:00.725Z",
 }
 ```
 POST /entregadores
@@ -96,7 +103,7 @@ POST /entregadores
   "cnpj": "123813412421",
   "birth_date": "2024-12-04T02:06:45.448Z",
   "cnh_number": "1231414",
-  "cnh_type": "B",
+  "cnh_type": "A",
   "image_cnh": ""
 }
 ```
