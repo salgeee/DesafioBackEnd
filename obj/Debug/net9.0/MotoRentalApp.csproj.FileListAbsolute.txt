@@ -113,3 +113,6 @@ C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\Snappier.dll
 C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\ZstdSharp.dll
 C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\MotoRentalApp.xml
 C:\Users\leofs\Documents\programas\DesafioBackEnd\obj\Debug\net9.0\MotoRentalApp.xml
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\AWSSDK.Core.dll
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\AWSSDK.S3.dll
+C:\Users\leofs\Documents\programas\DesafioBackEnd\bin\Debug\net9.0\AWSSDK.SQS.dll

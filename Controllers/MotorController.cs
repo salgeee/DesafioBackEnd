@@ -30,6 +30,12 @@ public class MotorController : ControllerBase
     public IActionResult AddMotorcycle([FromBody] CreateMotoDto motoDto)
     {
         
+        var existingMoto = _context.Motorcycles.Find(m => m.Identifier == motoDto.Identifier).FirstOrDefault();
+        if (existingMoto != null)
+        {
+            return BadRequest(new { mensagem = "Já existe uma moto cadastrada com este Id." });
+        }
+        
         if (!ModelState.IsValid)
         {
             return BadRequest(new { mensagem = "Dados inválidos" });

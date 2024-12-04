@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "bYGcE8XEcv4=",
+  "dgSpecHash": "1/rvm3QGTuI=",
   "success": true,
   "projectFilePath": "C:\\Users\\leofs\\Documents\\programas\\DesafioBackEnd\\MotoRentalApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\leofs\\.nuget\\packages\\awssdk.core\\3.7.400.59\\awssdk.core.3.7.400.59.nupkg.sha512",
+    "C:\\Users\\leofs\\.nuget\\packages\\awssdk.s3\\3.7.410\\awssdk.s3.3.7.410.nupkg.sha512",
+    "C:\\Users\\leofs\\.nuget\\packages\\awssdk.sqs\\3.7.400.59\\awssdk.sqs.3.7.400.59.nupkg.sha512",
     "C:\\Users\\leofs\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\leofs\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
     "C:\\Users\\leofs\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

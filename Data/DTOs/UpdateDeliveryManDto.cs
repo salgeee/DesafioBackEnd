@@ -5,5 +5,5 @@ public class UpdateDeliveryManDto
 {
  
     [Required(ErrorMessage = "Image CNH is required")]
-    public string image_cnh { get; set; }
+    public IFormFile CnhImage { get; set; }
 }

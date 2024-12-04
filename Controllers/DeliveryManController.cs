@@ -30,6 +30,12 @@ public class DeliveryManController : ControllerBase
     public IActionResult AddDeliveryMan([FromBody] CreateDeliveryManDto deliveryManDto)
     {
         
+        var existingMoto = _context.DeliveryMan.Find(m => m.Identifier == deliveryManDto.Identifier).FirstOrDefault();
+        if (existingMoto != null)
+        {
+            return BadRequest(new { mensagem = "Já existe um entregador cadastrado com este Identifier." });
+        }
+        
         var existingCnpj = _context.DeliveryMan.Find(d => d.cnpj == deliveryManDto.cnpj).FirstOrDefault();
 
         var existingCnhNumber = _context.DeliveryMan.Find(d => d.cnh_number == deliveryManDto.cnh_number).FirstOrDefault();
@@ -71,20 +77,45 @@ public class DeliveryManController : ControllerBase
     /// <response code="400">Caso não seja válido</response>
     [HttpPost("{id}/cnh")]
     [ProducesResponseType(StatusCodes.Status200OK)] 
-    public IActionResult PutDeliveryManCnh(string id, [FromBody] UpdateDeliveryManDto deliveryManDto)
+    public IActionResult UploadCnh(string id, [FromForm] UpdateDeliveryManDto cnhDto)
     {
+        
+        Console.WriteLine($"Recebendo upload de CNH para ID: {id}");
+        
         if (string.IsNullOrEmpty(id))
         {
             return BadRequest(new { mensagem = "Dados inválidos" });
         }
         
-        var deliveryMan = _context.DeliveryMan.Find(m => m.Identifier == id).FirstOrDefault();
-        if (deliveryMan == null) return NotFound(new { message = "Motorcycle not found" });
+        var deliveryman = _context.DeliveryMan.Find(d => d.Identifier == id).FirstOrDefault();
+        if (deliveryman == null)
+        {
+            return NotFound(new { mensagem = "Entregador não encontrado." });
+        }
+
+        Console.WriteLine($"Arquivo recebido: {cnhDto.CnhImage.FileName}");
         
-        deliveryMan.image_cnh = deliveryManDto.image_cnh;
         
-        _context.DeliveryMan.ReplaceOne(m => m.Identifier == id, deliveryMan);
-        return Ok(new { message = "Image CNH updated" });
+        var allowedExtensions = new[] { ".png", ".bmp" };
+        var fileExtension = Path.GetExtension(cnhDto.CnhImage.FileName).ToLower();
+        if (!allowedExtensions.Contains(fileExtension))
+        {
+            return BadRequest(new { mensagem = "Formato de arquivo inválido. Apenas .png e .bmp são permitidos." });
+        }
+        var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "CnhImages");
+        if (!Directory.Exists(folderPath))
+        {
+            Directory.CreateDirectory(folderPath);
+        }
+
+        var filePath = Path.Combine(folderPath, $"{id}_cnh{fileExtension}");
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            cnhDto.CnhImage.CopyTo(stream);
+        }
+
+       
+        return Ok(new { mensagem = "Imagem enviada com sucesso.", caminho = filePath });
     }
     
     

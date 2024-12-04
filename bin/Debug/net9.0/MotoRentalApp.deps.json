@@ -8,12 +8,44 @@
     ".NETCoreApp,Version=v9.0": {
       "MotoRentalApp/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "3.7.410",
+          "AWSSDK.SQS": "3.7.400.59",
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
           "MongoDB.Driver": "3.0.0",
           "Swashbuckle.AspNetCore": "7.1.0"
         },
         "runtime": {
           "MotoRentalApp.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.400.59": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.400.59"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.410": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.400.59"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.410.0"
+          }
+        }
+      },
+      "AWSSDK.SQS/3.7.400.59": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.400.59"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.SQS.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.400.59"
+          }
         }
       },
       "DnsClient/1.6.1": {
@@ -163,6 +195,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.400.59": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JpF1RLRti7AJsN3Y8kbmKhZ7Q0/6wujYrxYIF0A22CJB9ndYJ95TgKmcV/7KLmrG9AFH3cwJ1HEv6jsCpteveQ==",
+      "path": "awssdk.core/3.7.400.59",
+      "hashPath": "awssdk.core.3.7.400.59.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.410": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fgTz3ur707M40q5CMirmjJ23mmkFsr5a77/C2lp4Ge4KUcS1TwRx6LMZAbkxaXlRQdEE0t+fSxCA1tfW51w5+Q==",
+      "path": "awssdk.s3/3.7.410",
+      "hashPath": "awssdk.s3.3.7.410.nupkg.sha512"
+    },
+    "AWSSDK.SQS/3.7.400.59": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ikK75PXfbx8aTjAtm86hhOdMNrH7R+17XZDEV8GZcd9FI5rfVN6FLTGkQ/tEU/ylpB8bOBzZ5IC9UwQneDco9g==",
+      "path": "awssdk.sqs/3.7.400.59",
+      "hashPath": "awssdk.sqs.3.7.400.59.nupkg.sha512"
     },
     "DnsClient/1.6.1": {
       "type": "package",

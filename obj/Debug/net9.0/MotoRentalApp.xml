@@ -13,7 +13,7 @@
             <response code="201"> Caso a moto seja cadastrada com sucesso</response>
             <response code="400"> Dados inválidos</response>
         </member>
-        <member name="M:MotoRentalApp.Controllers.DeliveryManController.PutDeliveryManCnh(System.String,MotoRentalApp.Data.DTOs.UpdateDeliveryManDto)">
+        <member name="M:MotoRentalApp.Controllers.DeliveryManController.UploadCnh(System.String,MotoRentalApp.Data.DTOs.UpdateDeliveryManDto)">
             <summary>
             Enviar a foto da CNH
             </summary>
