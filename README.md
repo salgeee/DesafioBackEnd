@@ -111,11 +111,10 @@ POST /entregadores/{id}/cnh
 
 
 ## Tecnologias Utilizadas
-ASP.NET Core 7.0
+ASP.NET Core 9.0
 
 MongoDB
 
 Swagger (Swashbuckle)
 
-Docker
-
+EntityFramework 
