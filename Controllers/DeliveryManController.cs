@@ -113,6 +113,11 @@ public class DeliveryManController : ControllerBase
             cnhDto.CnhImage.CopyTo(stream);
         }
 
+        var updateDefinition = Builders<DeliveryMan>.Update
+            .Set(d => d.image_cnh, filePath);
+        
+        _context.DeliveryMan.UpdateOne(d => d.Identifier == id, updateDefinition);
+
        
         return Ok(new { mensagem = "Imagem enviada com sucesso.", caminho = filePath });
     }

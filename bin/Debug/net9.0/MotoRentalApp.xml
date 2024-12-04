@@ -8,9 +8,9 @@
             <summary>
             Cadastrar um novo entregador
             </summary>
-            <param name="motoDto">Objeto com os campos necessários para cadastrar uma nova moto</param>
+            <param name="deliveryManDto">Objeto com os campos necessários para cadastrar um novo entregador</param>
             <returns>IActionResult</returns>
-            <response code="201"> Caso a moto seja cadastrada com sucesso</response>
+            <response code="201"> Caso o entregador seja cadastrado com sucesso</response>
             <response code="400"> Dados inválidos</response>
         </member>
         <member name="M:MotoRentalApp.Controllers.DeliveryManController.UploadCnh(System.String,MotoRentalApp.Data.DTOs.UpdateDeliveryManDto)">
@@ -18,7 +18,7 @@
             Enviar a foto da CNH
             </summary>
             <returns>IActionResult</returns>
-            <response code="200">Caso seja válido placa modificada com sucesso</response>
+            <response code="200">Caso seja enviado a foto com sucesso</response>
             <response code="404">Caso não seja válido</response>
             <response code="400">Caso não seja válido</response>
         </member>
@@ -26,9 +26,9 @@
             <summary>
             Cadastrar um novo entregador
             </summary>
-            <param name="motoDto">Objeto com os campos necessários para cadastrar uma nova moto</param>
+            <param name="locationDto">Objeto com os campos necessários para cadastrar uma nova locação</param>
             <returns>IActionResult</returns>
-            <response code="201"> Caso a moto seja cadastrada com sucesso</response>
+            <response code="201"> Caso a locação seja cadastrada com sucesso</response>
             <response code="400"> Dados inválidos</response>
         </member>
         <member name="M:MotoRentalApp.Controllers.LocationController.GetLocationById(System.String)">
@@ -41,10 +41,10 @@
         </member>
         <member name="M:MotoRentalApp.Controllers.LocationController.PutLocation(System.String,MotoRentalApp.Data.DTOs.UpdateLocationReturnDto)">
             <summary>
-            Enviar a foto da CNH
+            Informar a data da devolução e calcular valor
             </summary>
             <returns>IActionResult</returns>
-            <response code="200">Caso seja válido placa modificada com sucesso</response>
+            <response code="200">Caso seja válido calcula o valor</response>
             <response code="404">Caso não seja válido</response>
             <response code="400">Caso não seja válido</response>
         </member>
