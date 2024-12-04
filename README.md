@@ -18,6 +18,12 @@ Clone o projeto para o seu ambiente local:
 git clone https://github.com/SEU_USUARIO/motorental-api.git
 cd motorental-api
 ```
+### Testar API com Swagger para verificar os EndPoints
+```
+http://localhost:5000/swagger
+```
+
+
 ### Configurar MongoDB
 ```
 {
