@@ -6,7 +6,7 @@ Este projeto é uma API para gerenciamento de locações de motocicletas, desenv
 
 Certifique-se de que você possui os seguintes softwares instalados:
 
-- [.NET SDK 7.0+](https://dotnet.microsoft.com/download/dotnet/7.0)
+- [.NET SDK 7.0+](https://dotnet.microsoft.com/pt-br/download)
 - [MongoDB](https://www.mongodb.com/try/download/community) ou serviço compatível
 - [Docker](https://www.docker.com/) (opcional, para subir o MongoDB localmente)
 
@@ -15,7 +15,7 @@ Certifique-se de que você possui os seguintes softwares instalados:
 ### 1. Clone o Repositório
 Clone o projeto para o seu ambiente local:
 ```bash
-git clone https://github.com/SEU_USUARIO/motorental-api.git
+git clone https://github.com/salgeee/DesafioBackEnd.git
 cd motorental-api
 ```
 
@@ -54,9 +54,9 @@ POST /entregadores/{id}/cnh: Enviar a CNH do entregador.
 ```
 Locação
 ``` 
-POST /locacoes: Criar uma nova locação.
-PUT /locacoes/{id}/devolucao: Registrar a devolução da moto.
-GET /locacoes/{id}: Registrar a devolução da moto.
+POST /locacao: Criar uma nova locação.
+PUT /locacao/{id}/devolucao: Registrar a devolução da moto.
+GET /locacao/{id}: Registrar a devolução da moto.
 ```
 Motos
 ``` 
@@ -71,14 +71,14 @@ DELETE /motos/{id}: Remover uma moto
 POST /motos
 ``` 
 {
-  "id": "moto123",
+  "identifier": "moto123",
   "year": 2024,
-  "model": "Mottu Sport",
+  "model": "Moto Sport",
   "plate": "ABC-1234"
 }
 ```
 
-POST /locacoes
+POST /locacao
 ```
 {
   "id_deliveryman": "entregador123",
@@ -88,7 +88,22 @@ POST /locacoes
   "plan": 7
 }
 ```
-
+POST /entregadores
+```
+{
+  "identifier": "string",
+  "name": "Roberto Carlos",
+  "cnpj": "123813412421",
+  "birth_date": "2024-12-04T02:06:45.448Z",
+  "cnh_number": "1231414",
+  "cnh_type": "B",
+  "image_cnh": ""
+}
+```
+POST /entregadores/{id}/cnh
+```
+cnhimage file png ou bmp
+```
 
 ## Tecnologias Utilizadas
 ASP.NET Core 7.0
