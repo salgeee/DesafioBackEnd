@@ -7,9 +7,7 @@ Este projeto é uma API para gerenciamento de locações de motocicletas, desenv
 Certifique-se de que você possui os seguintes softwares instalados:
 
 - [.NET SDK 9.0](https://dotnet.microsoft.com/pt-br/download)
-- [MongoDB](https://www.mongodb.com/try/download/community) ou serviço compatível
-- [Docker](https://www.docker.com/) (opcional, para subir o MongoDB localmente)
-
+- [MongoDB](https://www.mongodb.com/try/download/community) 
 ## Rodando o Projeto Localmente
 
 ### 1. Clone o Repositório
