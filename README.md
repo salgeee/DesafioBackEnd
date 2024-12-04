@@ -17,3 +17,36 @@ Clone o projeto para o seu ambiente local:
 ```bash
 git clone https://github.com/SEU_USUARIO/motorental-api.git
 cd motorental-api
+```
+### Configurar MongoDB
+```
+{
+  "MongoDB": {
+    "ConnectionString": "mongodb://localhost:27017",
+    "DatabaseName": "MotoRentalDB"
+  }
+}
+```
+
+### Testes com Postman(ou similares)
+
+Entregadores
+```
+POST /entregadores: Cadastrar um novo entregador.
+POST /entregadores/{id}/cnh: Enviar a CNH do entregador.
+```
+Locação
+``` 
+POST /locacoes: Criar uma nova locação.
+PUT /locacoes/{id}/devolucao: Registrar a devolução da moto.
+GET /locacoes/{id}: Registrar a devolução da moto.
+```
+Motos
+``` 
+POST /motos: Cadastrar uma nova moto
+GET  /motos: Consultar motos existentes
+PUT /motos/{id}/placa: Modificar a placa de uma moto
+GET /motos/{id}: Consultar motos existentes por id
+DELETE /motos/{id}: Remover uma moto
+``` 
+
