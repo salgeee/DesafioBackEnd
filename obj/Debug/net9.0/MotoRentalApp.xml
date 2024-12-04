@@ -18,7 +18,7 @@
             Enviar a foto da CNH
             </summary>
             <returns>IActionResult</returns>
-            <response code="200">Caso seja enviado a foto com sucesso</response>
+            <response code="201">Caso seja enviado a foto com sucesso</response>
             <response code="404">Caso não seja válido</response>
             <response code="400">Caso não seja válido</response>
         </member>

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
     
 [ApiController]
 [Route("locacao")]
-
+[Tags("Locação")]
 public class LocationController : ControllerBase
 {
     private readonly LocationContext _context;

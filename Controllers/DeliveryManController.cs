@@ -9,8 +9,10 @@ using MotoRentalApp.Models;
 namespace MotoRentalApp.Controllers;
 using Microsoft.AspNetCore.Mvc;
     
+
 [ApiController]
 [Route("entregadores")]
+[Tags("Entregadores")]
 
 public class DeliveryManController : ControllerBase
 {
@@ -75,11 +77,11 @@ public class DeliveryManController : ControllerBase
     /// Enviar a foto da CNH
     /// </summary>
     /// <returns>IActionResult</returns>
-    /// <response code="200">Caso seja enviado a foto com sucesso</response>
+    /// <response code="201">Caso seja enviado a foto com sucesso</response>
     /// <response code="404">Caso não seja válido</response>
     /// <response code="400">Caso não seja válido</response>
     [HttpPost("{id}/cnh")]
-    [ProducesResponseType(StatusCodes.Status200OK)] 
+    [ProducesResponseType(StatusCodes.Status201Created)] 
     public IActionResult UploadCnh(string id, [FromForm] UpdateDeliveryManDto cnhDto)
     {
         
@@ -119,7 +121,7 @@ public class DeliveryManController : ControllerBase
         _context.DeliveryMan.UpdateOne(d => d.Identifier == id, updateDefinition);
 
        
-        return Ok(new { mensagem = "Imagem enviada com sucesso.", caminho = filePath });
+        return Created("", new { mensagem = "Imagem enviada com sucesso.", caminho = filePath });
     }
     
     

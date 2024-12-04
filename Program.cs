@@ -31,6 +31,7 @@ builder.Services.AddSwaggerGen(options =>
     });
     
     options.OperationFilter<SwaggerResponseExamplesFilter>();
+    
 
 });
 

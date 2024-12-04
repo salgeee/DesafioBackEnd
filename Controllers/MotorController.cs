@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
     
 [ApiController]
 [Route("motos")]
-
+[Tags("Motos")]
 public class MotorController : ControllerBase
 {
     private readonly MotorcycleContext _context;
