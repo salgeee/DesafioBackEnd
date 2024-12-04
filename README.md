@@ -15,7 +15,7 @@ Certifique-se de que você possui os seguintes softwares instalados:
 ### 1. Clone o Repositório
 Clone o projeto para o seu ambiente local:
 ```bash
-git clone https://github.com/salgeee/motorental-api.git
+git clone https://github.com/salgeee/DesafioBackEnd.git
 cd motorental-api
 ```
 
