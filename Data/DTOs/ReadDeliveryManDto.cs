@@ -1,4 +1,6 @@
-﻿namespace MotoRentalApp.Data.DTOs;
+﻿using System;
+
+namespace MotoRentalApp.Data.DTOs;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
