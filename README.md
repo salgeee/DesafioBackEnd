@@ -16,7 +16,7 @@ Certifique-se de que você possui os seguintes softwares instalados:
 Clone o projeto para o seu ambiente local:
 ```bash
 git clone https://github.com/salgeee/DesafioBackEnd.git
-cd motorental-api
+cd desafiobackend
 ```
 
 ### 2. Configurar Banco de Dados
