@@ -38,6 +38,7 @@ dotnet restore
 ```
 dotnet run
 ```
+A aplicação estará disponível em http://localhost:5000.
 
 ### 5. Testar a API com Swagger
 ```
@@ -45,9 +46,7 @@ http://localhost:5000/swagger
 ```
 
 
-
-
-## Testes com Postman(ou similares)
+## EndPoints Disponíveis
 
 Entregadores
 ```
@@ -68,6 +67,28 @@ PUT /motos/{id}/placa: Modificar a placa de uma moto
 GET /motos/{id}: Consultar motos existentes por id
 DELETE /motos/{id}: Remover uma moto
 ```
+ Exemplos:
+
+POST /motos
+
+{
+  "id": "moto123",
+  "year": 2024,
+  "model": "Mottu Sport",
+  "plate": "ABC-1234"
+}
+
+POST /locacoes
+
+{
+  "id_deliveryman": "entregador123",
+  "id_motor": "moto123",
+  "start_date": "2024-01-01",
+  "end_forecast_date": "2024-01-07",
+  "plan": 7
+}
+
+
 
 ## Tecnologias Utilizadas
 ASP.NET Core 7.0
