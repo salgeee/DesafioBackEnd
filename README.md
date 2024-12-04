@@ -101,9 +101,9 @@ POST /entregadores
 }
 ```
 POST /entregadores/{id}/cnh
-```
-cnhimage file png ou bmp
-```
+
+![image](https://github.com/user-attachments/assets/b11a2960-5956-4c90-9a4b-98a35cafb351)
+
 
 ## Tecnologias Utilizadas
 ASP.NET Core 7.0
