@@ -100,6 +100,10 @@ POST /entregadores
   "image_cnh": ""
 }
 ```
+POST /entregadores/{id}/cnh
+```
+cnhimage file png ou bmp
+```
 
 ## Tecnologias Utilizadas
 ASP.NET Core 7.0
