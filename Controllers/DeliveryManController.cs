@@ -24,9 +24,9 @@ public class DeliveryManController : ControllerBase
     /// <summary>
     /// Cadastrar um novo entregador
     /// </summary>
-    /// <param name="motoDto">Objeto com os campos necessários para cadastrar uma nova moto</param>
+    /// <param name="deliveryManDto">Objeto com os campos necessários para cadastrar um novo entregador</param>
     /// <returns>IActionResult</returns>
-    /// <response code="201"> Caso a moto seja cadastrada com sucesso</response>
+    /// <response code="201"> Caso o entregador seja cadastrado com sucesso</response>
     /// <response code="400"> Dados inválidos</response>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)] 
@@ -36,7 +36,7 @@ public class DeliveryManController : ControllerBase
         var existingMoto = _context.DeliveryMan.Find(m => m.Identifier == deliveryManDto.Identifier).FirstOrDefault();
         if (existingMoto != null)
         {
-            return BadRequest(new { mensagem = "Já existe um entregador cadastrado com este Identifier." });
+            return BadRequest(new { mensagem = "Já existe um entregador cadastrado com este identifier." });
         }
         
         var existingCnpj = _context.DeliveryMan.Find(d => d.cnpj == deliveryManDto.cnpj).FirstOrDefault();
@@ -75,15 +75,13 @@ public class DeliveryManController : ControllerBase
     /// Enviar a foto da CNH
     /// </summary>
     /// <returns>IActionResult</returns>
-    /// <response code="200">Caso seja válido placa modificada com sucesso</response>
+    /// <response code="200">Caso seja enviado a foto com sucesso</response>
     /// <response code="404">Caso não seja válido</response>
     /// <response code="400">Caso não seja válido</response>
     [HttpPost("{id}/cnh")]
     [ProducesResponseType(StatusCodes.Status200OK)] 
     public IActionResult UploadCnh(string id, [FromForm] UpdateDeliveryManDto cnhDto)
     {
-        
-        Console.WriteLine($"Recebendo upload de CNH para ID: {id}");
         
         if (string.IsNullOrEmpty(id))
         {
@@ -95,8 +93,6 @@ public class DeliveryManController : ControllerBase
         {
             return NotFound(new { mensagem = "Entregador não encontrado." });
         }
-
-        Console.WriteLine($"Arquivo recebido: {cnhDto.CnhImage.FileName}");
         
         
         var allowedExtensions = new[] { ".png", ".bmp" };

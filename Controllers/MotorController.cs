@@ -98,12 +98,12 @@ public class MotorController : ControllerBase
         }
         
         var moto = _context.Motorcycles.Find(m => m.Identifier == id).FirstOrDefault();
-        if (moto == null) return NotFound(new { message = "Motorcycle not found" });
+        if (moto == null) return NotFound(new { message = "Moto não encontrada" });
         
         moto.Plate = motoDto.Plate;
         
         _context.Motorcycles.ReplaceOne(m => m.Identifier == id, moto);
-        return Ok(new { message = "Plate updated" });
+        return Ok(new { message = "Placa atualizada" });
     }
     
     
@@ -159,7 +159,7 @@ public class MotorController : ControllerBase
             Motorcycles.DeleteOne(m => m.Identifier == id);
         if (deleteResult.DeletedCount == 0)
         {
-            return NotFound(new { message = "Motorcycle not found" });
+            return NotFound(new { message = "Moto não encontrada" });
         }
         
         return Ok();

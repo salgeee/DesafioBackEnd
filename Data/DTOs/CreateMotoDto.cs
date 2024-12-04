@@ -5,18 +5,18 @@ using Swashbuckle.AspNetCore.Annotations;
 public class CreateMotoDto
 {
     
-    [Required(ErrorMessage = "Identifier is required")]
-    [MaxLength(50, ErrorMessage = "Identifier cannot exceed 50 characters.")]
+    [Required(ErrorMessage = "Identifier é necessário")]
+    [MaxLength(50, ErrorMessage = "Identifier não pode exceder 50 characters.")]
     public string Identifier { get; set; } 
     
-    [Required(ErrorMessage = "Year is required")]
+    [Required(ErrorMessage = "Year é necessário")]
     public int Year { get; set; }
     
-    [Required(ErrorMessage = "Model is required")]
+    [Required(ErrorMessage = "Model é necessário")]
     public string Model { get; set; }
     
     
-    [Required(ErrorMessage = "Plate is required")]
-    [MaxLength(10, ErrorMessage = "Max length for the plate is 10")]
+    [Required(ErrorMessage = "Plate é necessário")]
+    [MaxLength(10, ErrorMessage = "Tamanho máximo para plate é 10")]
     public string Plate { get; set; }
 }

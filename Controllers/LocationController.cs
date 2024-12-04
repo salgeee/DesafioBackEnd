@@ -26,9 +26,9 @@ public class LocationController : ControllerBase
     /// <summary>
     /// Cadastrar um novo entregador
     /// </summary>
-    /// <param name="motoDto">Objeto com os campos necessários para cadastrar uma nova moto</param>
+    /// <param name="locationDto">Objeto com os campos necessários para cadastrar uma nova locação</param>
     /// <returns>IActionResult</returns>
-    /// <response code="201"> Caso a moto seja cadastrada com sucesso</response>
+    /// <response code="201"> Caso a locação seja cadastrada com sucesso</response>
     /// <response code="400"> Dados inválidos</response>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)] 
@@ -103,10 +103,10 @@ public class LocationController : ControllerBase
     
     
     /// <summary>
-    /// Enviar a foto da CNH
+    /// Informar a data da devolução e calcular valor
     /// </summary>
     /// <returns>IActionResult</returns>
-    /// <response code="200">Caso seja válido placa modificada com sucesso</response>
+    /// <response code="200">Caso seja válido calcula o valor</response>
     /// <response code="404">Caso não seja válido</response>
     /// <response code="400">Caso não seja válido</response>
     [HttpPut("{id}/devolucao")]
@@ -119,7 +119,7 @@ public class LocationController : ControllerBase
         }
         
         var location = _context.Location.Find(m => m.Identifier == id).FirstOrDefault();
-        if (location == null) return NotFound(new { message = "Location not found" });
+        if (location == null) return NotFound(new { message = "Locação não encontrada." });
         
         location.return_date = locationDto.return_date;
         
@@ -178,7 +178,7 @@ public class LocationController : ControllerBase
         _context.Location.ReplaceOne(m => m.Identifier == id, location);
         return Ok(new
         {
-            message = "Return date updated",
+            message = "Data de devolução atualizada",
             custo_total = totalCost,
             dias_alugados = rentalDays
         });
