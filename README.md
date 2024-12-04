@@ -67,5 +67,14 @@ GET  /motos: Consultar motos existentes
 PUT /motos/{id}/placa: Modificar a placa de uma moto
 GET /motos/{id}: Consultar motos existentes por id
 DELETE /motos/{id}: Remover uma moto
-``` 
+```
+
+## Tecnologias Utilizadas
+ASP.NET Core 7.0
+
+MongoDB
+
+Swagger (Swashbuckle)
+
+Docker
 
