@@ -71,7 +71,7 @@ DELETE /motos/{id}: Remover uma moto
 POST /motos
 ``` 
 {
-  "id": "moto123",
+  "identifier": "moto123",
   "year": 2024,
   "model": "Moto Sport",
   "plate": "ABC-1234"
