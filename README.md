@@ -54,9 +54,9 @@ POST /entregadores/{id}/cnh: Enviar a CNH do entregador.
 ```
 Locação
 ``` 
-POST /locacoes: Criar uma nova locação.
-PUT /locacoes/{id}/devolucao: Registrar a devolução da moto.
-GET /locacoes/{id}: Registrar a devolução da moto.
+POST /locacao: Criar uma nova locação.
+PUT /locacao/{id}/devolucao: Registrar a devolução da moto.
+GET /locacao/{id}: Registrar a devolução da moto.
 ```
 Motos
 ``` 
@@ -78,7 +78,7 @@ POST /motos
 }
 ```
 
-POST /locacoes
+POST /locacao
 ```
 {
   "id_deliveryman": "entregador123",
@@ -88,7 +88,18 @@ POST /locacoes
   "plan": 7
 }
 ```
-
+POST /entregadores
+```
+{
+  "identifier": "string",
+  "name": "Roberto Carlos",
+  "cnpj": "123813412421",
+  "birth_date": "2024-12-04T02:06:45.448Z",
+  "cnh_number": "1231414",
+  "cnh_type": "B",
+  "image_cnh": ""
+}
+```
 
 ## Tecnologias Utilizadas
 ASP.NET Core 7.0
