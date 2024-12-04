@@ -73,7 +73,7 @@ POST /motos
 {
   "id": "moto123",
   "year": 2024,
-  "model": "Mottu Sport",
+  "model": "Moto Sport",
   "plate": "ABC-1234"
 }
 ```
