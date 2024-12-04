@@ -70,16 +70,17 @@ DELETE /motos/{id}: Remover uma moto
  Exemplos:
 
 POST /motos
-
+``` 
 {
   "id": "moto123",
   "year": 2024,
   "model": "Mottu Sport",
   "plate": "ABC-1234"
 }
+```
 
 POST /locacoes
-
+```
 {
   "id_deliveryman": "entregador123",
   "id_motor": "moto123",
@@ -87,7 +88,7 @@ POST /locacoes
   "end_forecast_date": "2024-01-07",
   "plan": 7
 }
-
+```
 
 
 ## Tecnologias Utilizadas
